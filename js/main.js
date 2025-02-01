@@ -11,6 +11,8 @@ $(document).ready(function () {
 
     // Aplicando a máscara com o plugin 'JS'
     $('#telefone').mask('(00) 00000-0000');
+    $('#cpf').mask('000.000.000-00', {reverse: true});
+    $('#cep').mask('00000-000');
 
     // Configuração da validação do formulário com jQuery Validate
     $('form').validate({
@@ -24,6 +26,12 @@ $(document).ready(function () {
                 email: true,
             },
             telefone: {
+                required: true
+            },
+            cpf: {
+                required: true
+            },
+            cep: {
                 required: true
             },
             veiculoDeInteresse: { 
@@ -45,6 +53,12 @@ $(document).ready(function () {
             },
             telefone: {
                 required: "Por favor, insira seu telefone"
+            },
+            cpf: {
+                required: "Por favor, insira seu CPF"
+            },
+            cep: {
+                required: "Por favor, insira o CEP"
             },
             veiculoDeInteresse: {
                 required: "Por favor, insira o veículo de interesse"
